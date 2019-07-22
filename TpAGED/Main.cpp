@@ -100,7 +100,7 @@ int main() {
 			}
 			break;
 		default : system("cls");
-			cout << "Ingrese un valor correctosss" << endl;
+			cout << "Ingrese un valor correct" << endl;
 		}
 	} while (aux != 's' || aux != 'S');
 
