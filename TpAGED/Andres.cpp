@@ -34,7 +34,7 @@ void RegistroPokemons(Pokemon pokemones[]) {
 	cin >> cantPokemons;
 	for (int i = 0; i < cantPokemons; i++)
 	{
-		cout << "Ingrese el nombre del Pokemon (Maximo 10 letras): " << endl; cin >> pokemones[i].nombre;
+		cout << "Ingrese el nombre del Pokemon (Maximo 10 letras): " << endl; cin >> pokemones[i].nombre;     
 		cout << "Ingrese el tipo de Pokemon en Mayuscula (T para los tipo Tierra, F para los tipo Fuego, "
 			"A para los tipo Agua, E para los tipo Eléctrico): " << endl; cin >> pokemones[i].tipo;
 		cout << "Ingrese el nivel del Pokemon (Nivel 1-1000): " << endl; cin >> pokemones[i].nivel;
@@ -92,7 +92,7 @@ int main() {
 		case '8': system("cls");
 			cout << "¿Esta seguro que desea salir? (S/N)" << endl;
 			cin >> aux;
-			if (aux == 'S' || aux == 's') {
+			if (aux == 'S' || aux == 's') { 
 				cout << "Gracias por su visita." << endl;
 				exit(-1);
 			}
