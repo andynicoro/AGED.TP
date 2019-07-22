@@ -73,6 +73,7 @@ void PokemonMenosPoderoso(Pokemon pokemones[200]) {
 }
 
 int main() {
+
 	Pokemon pokemones[200];
 	RegistroPokemons(pokemones);
 	char opcion;
