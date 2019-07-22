@@ -49,26 +49,26 @@ void RegistroPokemons(Pokemon pokemones []) {
 	}
 	cout << "Ha completado la carga de Pokemons" << endl;
 }
-void CantPokemonPorTipo() {
+void CantPokemonPorTipo(Pokemon pokemones[200]) {
 	cout << "HOLA MUNDO" << endl;
 }
-void PromedioPokemonPorTipo() {
+void PromedioPokemonPorTipo(Pokemon pokemones[200]) {
 	cout << "HOLA MUNDO 2" << endl;
 }
-void CantidadPokemonsMayores() {
+void CantidadPokemonsMayores(Pokemon pokemones[200]) {
 	cout << "HOLA MUNDO 3" << endl;
 }
-void CantidadPokemonsMenores() {
+void CantidadPokemonsMenores(Pokemon pokemones[200]) {
 	cout << "HOLA MUNDO 4" << endl;
 }
-void CantidadPokemonsIguales() {
+void CantidadPokemonsIguales(Pokemon pokemones[200]) {
 	cout << "HOLA MUNDO 5" << endl;
 }
-void PokemonMasPoderoso() {
+void PokemonMasPoderoso(Pokemon pokemones[200]) {
 	cout << "HOLA MUNDO 6" << endl;
 
 }
-void PokemonMenosPoderoso() {
+void PokemonMenosPoderoso(Pokemon pokemones) {
 
 }
 
@@ -81,13 +81,13 @@ int main() {
 	{
 		opcion = Menu();
 		switch (opcion) {
-		case '1': system("cls"); CantPokemonPorTipo(); break;
-		case '2': system("cls"); PromedioPokemonPorTipo(); break;
-		case '3': system("cls"); CantidadPokemonsMayores();  break;
-		case '4': system("cls"); CantidadPokemonsMenores(); break;
-		case '5': system("cls"); CantidadPokemonsIguales(); break;
-		case '6': system("cls"); PokemonMasPoderoso(); break;
-		case '7': system("cls"); PokemonMenosPoderoso(); break;
+		case '1': system("cls"); CantPokemonPorTipo(pokemones); break;
+		case '2': system("cls"); PromedioPokemonPorTipo(pokemones); break;
+		case '3': system("cls"); CantidadPokemonsMayorespokemones);  break;
+		case '4': system("cls"); CantidadPokemonsMenores(pokemones); break;
+		case '5': system("cls"); CantidadPokemonsIguales(pokemones); break;
+		case '6': system("cls"); PokemonMasPoderoso(pokemones); break;
+		case '7': system("cls"); PokemonMenosPoderoso(pokemones); break;
 		case '8': system("cls");
 			cout << "¿Esta seguro que desea salir? (S/N)" << endl;
 			cin >> aux;
