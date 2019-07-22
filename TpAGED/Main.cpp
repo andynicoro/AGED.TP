@@ -68,11 +68,12 @@ void PokemonMasPoderoso(Pokemon pokemones[200]) {
 	cout << "HOLA MUNDO 6" << endl;
 
 }
-void PokemonMenosPoderoso(Pokemon pokemones) {
+void PokemonMenosPoderoso(Pokemon pokemones[200]) {
 
 }
 
 int main() {
+
 	Pokemon pokemones[200];
 	RegistroPokemons(pokemones);
 	char opcion;
@@ -83,7 +84,7 @@ int main() {
 		switch (opcion) {
 		case '1': system("cls"); CantPokemonPorTipo(pokemones); break;
 		case '2': system("cls"); PromedioPokemonPorTipo(pokemones); break;
-		case '3': system("cls"); CantidadPokemonsMayorespokemones);  break;
+		case '3': system("cls"); CantidadPokemonsMayores(pokemones);  break;
 		case '4': system("cls"); CantidadPokemonsMenores(pokemones); break;
 		case '5': system("cls"); CantidadPokemonsIguales(pokemones); break;
 		case '6': system("cls"); PokemonMasPoderoso(pokemones); break;
