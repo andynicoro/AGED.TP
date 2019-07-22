@@ -93,14 +93,14 @@ int main() {
 			cout << "¿Esta seguro que desea salir? (S/N)" << endl;
 			cin >> aux;
 			if (aux == 'S' || aux == 's') {
-				cout << "Gracias por su visita." << endl; 
+				cout << "Gracias por su visita." << endl;
 				exit(-1);
 			}
 			else {
 				system("cls");
 			}
 			break;
-		default : system("cls");
+		default: system("cls");
 			cout << "Ingrese un valor correctos" << endl;
 		}
 	} while (aux != 's' || aux != 'S');
