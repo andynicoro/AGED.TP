@@ -14,7 +14,6 @@ struct Pokemon
 };
 
 
-
 char Menu() {
 	char opcion;
 	cout << "Bienvenido al programa orientado a la Pokedex en el juego Pokemon GO. Seleccione una opcion." << endl;
