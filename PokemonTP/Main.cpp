@@ -69,6 +69,168 @@ void RegistroPokemons(Pokemon pokemones[], int& cantPokemons) {
 	cout << "Ha completado la carga de Pokemons" << endl;
 }
 
+void PromedioPokemonPorTipo(Pokemon pokemones[]) {
+	int CanPromT = 0;
+	int CanPromF = 0;
+	int CanPromA = 0;
+	int CanPromE = 0;
+	int acumT = 0;
+	int acumF = 0;
+	int acumA = 0;
+	int acumE = 0;
+	float promT = 0;
+	float promF = 0;
+	float promA = 0;
+	float promE = 0;
+
+	for (int i = 0; i < cantPokemons; i++) {
+		if (pokemones[i].tipo == 'T') {
+			acumT = pokemones[i].nivel + acumT;
+			CanPromT++;
+			promT = float(acumT) / float(CanPromT);
+		}
+
+		if (pokemones[i].tipo == 'F') {
+			acumF = pokemones[i].nivel + acumF;
+			CanPromF++;
+			promF = float(acumF) / float(CanPromF);
+		}
+
+		if (pokemones[i].tipo == 'A') {
+			acumA = pokemones[i].nivel + acumA;
+			CanPromA++;
+			promA = float(acumA) / float(CanPromA);
+		}
+
+		if (pokemones[i].tipo == 'E') {
+			acumE = pokemones[i].nivel + acumE;
+			CanPromE++;
+			promE = float(acumE) / float(CanPromE);
+		}
+	}
+	cout << "El promedio del tipo tierra es: " << promT << endl;
+	cout << "El promedio del tipo Fuego es: " << promF << endl;
+	cout << "El promedio del tipo Agua es: " << promA << endl;
+	cout << "El promedio del tipo Electrico es: " << promE << endl;
+}
+
+void PokemonMasPoderoso(Pokemon pokemones[]) {  //POKEMON POR TIPO MAX NIVEL
+	int MaxT = 0; //Variables maximo nivel 
+	int MaxF = 0; //"           "     "
+	int MaxA = 0; //"           "     "
+	int MaxE = 0; //"           "     "
+	char NomMaxT[10];
+	char NomMaxF[10];
+	char NomMaxA[10];
+	char NomMaxE[10];
+
+	for (int i = 0; i < cantPokemons; i++) {
+
+		if (pokemones[i].tipo == 'T') {
+			if (pokemones[i].nivel >= MaxT)
+			{
+				MaxT = pokemones[i].nivel;
+				strcpy(NomMaxT, pokemones[i].nombre);
+			}
+		}
+
+		if (pokemones[i].tipo == 'F') {
+			if (pokemones[i].nivel >= MaxF)
+			{
+				MaxF = pokemones[i].nivel;
+				strcpy(NomMaxF, pokemones[i].nombre);
+			}
+		}
+
+		if (pokemones[i].tipo == 'A') {
+			if (pokemones[i].nivel >= MaxA)
+			{
+				MaxA = pokemones[i].nivel;
+				strcpy(NomMaxA, pokemones[i].nombre);
+			}
+		}
+
+		if (pokemones[i].tipo == 'E') {
+			if (pokemones[i].nivel >= MaxE)
+			{
+				MaxE = pokemones[i].nivel;
+				strcpy(NomMaxE, pokemones[i].nombre);
+			}
+		}
+	}
+	if (MaxT > 0)
+		cout << "El pokemon " << NomMaxT << " es el de mayor nivel del tipo Tierra" << endl;
+	if (MaxF > 0)
+		cout << "El pokemon " << NomMaxF << " es el de mayor nivel del tipo Fuego" << endl;
+	if (MaxA > 0)
+		cout << "El pokemon " << NomMaxA << " es el de mayor nivel del tipo Agua" << endl;
+	if (MaxE > 0)
+		cout << "El pokemon " << NomMaxE << " es el de mayor nivel del tipo Electrico" << endl;
+
+}
+
+void PokemonMenosPoderoso(Pokemon pokemones[]) {  //POKEMON POR TIPO MIN NIVEL
+	int MinT = 0; //Variables minimo nivel 
+	int MinF = 0; //"           "     "
+	int MinA = 0; //"           "     "
+	int MinE = 0; //"           "     "
+	bool PvezT = true;
+	bool PvezF = true;
+	bool PvezA = true;
+	bool PvezE = true;
+	char NomMinT[10];
+	char NomMinF[10];
+	char NomMinA[10];
+	char NomMinE[10];
+
+	for (int i = 0; i < cantPokemons; i++) {
+
+		if (pokemones[i].tipo == 'T') {
+			if (pokemones[i].nivel <= MinT || PvezT)
+			{
+				MinT = pokemones[i].nivel;
+				strcpy(NomMinT, pokemones[i].nombre);
+				PvezT = false;
+			}
+		}
+
+		if (pokemones[i].tipo == 'F') {
+			if (pokemones[i].nivel <= MinF || PvezF)
+			{
+				MinF = pokemones[i].nivel;
+				strcpy(NomMinF, pokemones[i].nombre);
+				PvezF = false;
+			}
+		}
+
+		if (pokemones[i].tipo == 'A') {
+			if (pokemones[i].nivel <= MinA || PvezA)
+			{
+				MinA = pokemones[i].nivel;
+				strcpy(NomMinA, pokemones[i].nombre);
+				PvezA = false;
+			}
+		}
+
+		if (pokemones[i].tipo == 'E') {
+			if (pokemones[i].nivel <= MinE || PvezE)
+			{
+				MinE = pokemones[i].nivel;
+				strcpy(NomMinE, pokemones[i].nombre);
+				PvezE = false;
+			}
+		}
+	}
+	if (MinT)
+		cout << "El pokemon " << NomMinT << " es el de menor nivel del tipo tierra" << endl;
+	if (MinF)
+		cout << "El pokemon " << NomMinF << " es el de menor nivel del tipo fuego" << endl;
+	if (MinA)
+		cout << "El pokemon " << NomMinA << " es el de menor nivel del tipo agua" << endl;
+	if (MinE)
+		cout << "El pokemon " << NomMinE << " es el de menor nivel del tipo electrico" << endl;
+}
+
 int main() {
 	setlocale(LC_ALL, "");
 	Pokemon pokemones[50];
