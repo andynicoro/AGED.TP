@@ -321,7 +321,7 @@ int main() {
 	RegistroPokemons(pokemones, cantPokemons);
 	char opcion;
 	char aux = 'N';
-	/*do
+	do
 	{
 		opcion = Menu();
 		switch (opcion) {
@@ -346,7 +346,7 @@ int main() {
 		default: system("cls");
 			cout << "Ingrese un valor correctos" << endl;
 		}
-	} while (aux != 's' || aux != 'S');*/
+	} while (aux != 's' || aux != 'S');
 
 	return 0;
 }
