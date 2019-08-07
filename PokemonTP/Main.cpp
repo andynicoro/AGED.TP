@@ -69,6 +69,37 @@ void RegistroPokemons(Pokemon pokemones[], int& cantPokemons) {
 	cout << "Ha completado la carga de Pokemons" << endl;
 }
 
+
+void CantPokemonPorTipo(Pokemon pokemones[]) {
+	int CanT = 0;
+	int CanF = 0;
+	int CanA = 0;
+	int CanE = 0;
+	for (int i = 0; i < cantPokemons; i++) {
+
+		if (pokemones[i].tipo == 'T') {
+			CanT++;
+		}
+
+		if (pokemones[i].tipo == 'F') {
+			CanF++;
+		}
+
+		if (pokemones[i].tipo == 'A') {
+			CanA++;
+		}
+
+		if (pokemones[i].tipo == 'E') {
+			CanE++;
+		}
+	}
+	cout << "Cantidad de pokemones del tipo Tierra es: " << CanT << endl;
+	cout << "Cantidad de pokemones del tipo Fuego es: " << CanF << endl;
+	cout << "Cantidad de pokemones del tipo Agua es: " << CanA << endl;
+	cout << "Cantidad de pokemones del tipo Electrico es: " << CanE << endl;
+
+}
+
 void PromedioPokemonPorTipo(Pokemon pokemones[]) {
 	int CanPromT = 0;
 	int CanPromF = 0;
@@ -112,6 +143,59 @@ void PromedioPokemonPorTipo(Pokemon pokemones[]) {
 	cout << "El promedio del tipo Fuego es: " << promF << endl;
 	cout << "El promedio del tipo Agua es: " << promA << endl;
 	cout << "El promedio del tipo Electrico es: " << promE << endl;
+}
+
+void CantidadPokemonsMayores(Pokemon pokemones[]) {
+	int cant = 0;
+	for (int i = 0; i < cantPokemons; i++)
+	{
+		if (pokemones[i].nivel > 500)
+			cant++;
+	}
+	if (cant > 0) {
+		if (cant > 1)
+			cout << "Hay " << cant << " pokemones con nivel mayor a 500" << endl;
+		else
+			cout << "Hay " << cant << " pokemon con nivel mayor a 500" << endl;
+	}
+	else
+		cout << "No hay pokemones con nivel mayor a 500" << endl;
+}
+
+void CantidadPokemonsMenores(Pokemon pokemones[]) {
+	int cant = 0;
+	for (int i = 0; i < cantPokemons; i++)
+	{
+		if (pokemones[i].nivel < 500)
+			cant++;
+	}
+	if (cant > 0)
+	{
+		if (cant > 1)
+			cout << "Hay " << cant << " pokemones con nivel menor a 500" << endl;
+		else
+			cout << "Hay " << cant << " pokemon con nivel menor a 500" << endl;
+	}
+	else
+		cout << "No hay pokemones con nivel menor a 500" << endl;
+}
+
+void CantidadPokemonsIguales(Pokemon pokemones[]) {
+	int cant = 0;
+	for (int i = 0; i < cantPokemons; i++)
+	{
+		if (pokemones[i].nivel == 500)
+			cant++;
+	}
+	if (cant > 0)
+	{
+		if (cant > 1)
+			cout << "Hay " << cant << " pokemones con nivel igual a 500" << endl;
+		else
+			cout << "Hay " << cant << " pokemon con nivel igual a 500" << endl;
+	}
+	else
+		cout << "No hay pokemones con nivel igual a 500" << endl;
 }
 
 void PokemonMasPoderoso(Pokemon pokemones[]) {  //POKEMON POR TIPO MAX NIVEL
