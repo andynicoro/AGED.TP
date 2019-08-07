@@ -39,9 +39,9 @@ void RegistroPokemons(Pokemon pokemones[]) {
 		cout << "Ingrese el tipo de Pokemon en Mayuscula (T para los tipo Tierra, F para los tipo Fuego, "
 			"A para los tipo Agua, E para los tipo Eléctrico): " << endl; cin >> pokemones[i].tipo;
 		cout << "Ingrese el nivel del Pokemon (Nivel 1-1000): " << endl; cin >> pokemones[i].nivel;
-		if (pokemones[i].tipo != 'T' || pokemones[i].tipo != 'F' || pokemones[i].tipo != 'A' || pokemones[i].tipo != 'E')
+		/*if (pokemones[i].tipo != 'T' || pokemones[i].tipo != 'F' || pokemones[i].tipo != 'A' || pokemones[i].tipo != 'E')
 			cout << "El tipo ingresado es incorrecto." << endl;
-		else if (pokemones[i].nivel < 1 || pokemones[i].nivel > 1000)
+		else */if (pokemones[i].nivel < 1 || pokemones[i].nivel > 1000)
 			cout << "El nivel ingresado es incorrecto" << endl;
 		else {
 			cout << "Pokemon cargado con exito" << endl;
